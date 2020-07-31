@@ -1,0 +1,31 @@
+"Games"
+{
+	/* Team Fortress 2 */
+	"tf"
+	{
+		"Offsets"
+		{
+			"CTFWeaponBaseGrenadeProj::Detonate"
+			{
+				"library" 	"server"
+				"windows" 	"229"
+				"linux" 	"228"
+			}
+			"CTFGrenadePipebombProjectile::VPhysicsCollision"
+			{
+				"library" 	"server"
+				"windows" 	"161"
+				"linux" 	"162"
+			}
+		}
+		"Signatures"
+		{
+			"CBaseEntity::CalcAbsolutePosition"
+			{
+				"library" 	"server"
+				"linux" 	"@_ZN11CBaseEntity20CalcAbsolutePositionEv"
+				"windows"	"\x55\x8B\xEC\x81\xEC\x80\x00\x00\x00\x56\x8B\xF1\x8B\x86\x14\x01\x00\x00"
+			}
+		}
+	}
+}
