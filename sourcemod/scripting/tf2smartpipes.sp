@@ -79,7 +79,7 @@ public bool CanHurtATarget(int ent, float origin[3], float radius)
 
 public bool WillHurtTarget(int ent, float origin[3], int victim)
 {
-	float spot[3]; GetClientEyePosition(victim, spot);
+	float spot[3]; GetEyePosition(victim, spot);
 	return Filter(ent, victim, origin, spot);
 }
 
@@ -148,6 +148,13 @@ stock float[] GetAbsOrigin(int ent)
 	float v[3];
 	GetEntPropVector(ent, Prop_Data, "m_vecAbsOrigin", v);
 	return v;
+}
+
+stock void GetEyePosition(int ent, float buffer[3])
+{
+	float pos[3]; pos = GetAbsOrigin(ent);
+	float offset[3]; GetEntPropVector(ent, Prop_Data, "m_vecViewOffset", offset);
+	AddVectors(pos, offset, buffer);
 }
 
 stock Handle DHookCreateEx(Handle gc, const char[] key, HookType hooktype, ReturnType returntype, ThisPointerType thistype, DHookCallback callback)
