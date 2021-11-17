@@ -8,14 +8,14 @@
 			"CTFWeaponBaseGrenadeProj::Detonate"
 			{
 				"library" 	"server"
-				"windows" 	"229"
-				"linux" 	"230"
+				"windows" 	"233"
+				"linux" 	"234"
 			}
 			"CTFGrenadePipebombProjectile::VPhysicsCollision"
 			{
 				"library" 	"server"
-				"windows" 	"161"
-				"linux" 	"162"
+				"windows" 	"164"
+				"linux" 	"165"
 			}
 		}
 		"Signatures"
